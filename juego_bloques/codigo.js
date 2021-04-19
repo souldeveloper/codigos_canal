@@ -92,11 +92,12 @@ function dibujarBola(){
     bola.style.left = posicionActualBola[0]+ 'px'
     bola.style.bottom = posicionActualBola[1]+ 'px'
 }
+//Añadir la bola al tablero
 const bola = document.createElement('div')
 bola.classList.add('bola')
 contenedor.appendChild(bola)
 dibujarBola()
-
+//Funcion que ejecuta el JUEGO
 function moverBola(){
     posicionActualBola[0] += xDireccionBola
     posicionActualBola[1] += yDireccionBola
@@ -104,9 +105,9 @@ function moverBola(){
     revisarColisiones()
     gameOver()
 }
-
+//Intervalo que se ejecuta cada 20 milisegundos PRINCIPAL DE EL JUEGO
 timerId = setInterval(moverBola, 20)
-
+//Definir la funcion que revia las colisiones
 function revisarColisiones(){
     //Colision con bloques
     for (let i = 0; i < bloques.length; i++){
@@ -137,7 +138,7 @@ function revisarColisiones(){
     }
 
 }
-
+//funcion que termina el juego si la bola toca suelo.
 function gameOver(){
     if(posicionActualBola[1] <= 0){
         clearInterval(timerId)
