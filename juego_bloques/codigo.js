@@ -104,6 +104,7 @@ function moverBola(){
     dibujarBola()
     revisarColisiones()
     gameOver()
+    //Todas las funciones
 }
 //Intervalo que se ejecuta cada 20 milisegundos PRINCIPAL DE EL JUEGO
 timerId = setInterval(moverBola, 20)
