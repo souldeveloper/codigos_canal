@@ -146,22 +146,6 @@ function gameOver(){
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //Funcion de cambiar la dirección.
 function cambiarDireccion(){
     if(xDireccionBola === 2 && yDireccionBola === 2){
