@@ -1,0 +1,59 @@
+.container{
+    height: 100vh;
+    width: 70vw;
+    margin: 2rem auto;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* slider */
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+}
+input:checked + .slider{
+    background-color: #2196F3;
+}
+input:focus + .slider{
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+/* redondear */
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+
+/* cambio de color */
+
+.change-color{
+    background-color: rgba(19, 19, 20, 0.965);
+    color: rgb(223, 215, 215);
+}
