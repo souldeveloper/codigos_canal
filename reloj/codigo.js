@@ -1,14 +1,16 @@
 const horaContainer = document.querySelector('.hora')
-const minutosContainer = document.querySelector('.minutos')
-const segundosContainer = document.querySelector('.segundos')
+/* const minutosContainer = document.querySelector('.minutos')
+const segundosContainer = document.querySelector('.segundos') */
 
 const actualizarHora = setInterval(function(){
-    console.log('pum pum')
-    const tiempo = new Date()
-    let hora = tiempo.getHours()
-    let minutos = tiempo.getMinutes()
-    let segundos = tiempo.getSeconds()
-    horaContainer.innerHTML = hora
+    /* let horas = date.getHours()
+    let minutos = date.getMinutes()
+    let segundos = date.getSeconds()
+    horaContainer.innerHTML = horas
     minutosContainer.innerHTML = minutos
-    segundosContainer.innerHTML = segundos
+    segundosContainer.innerHTML = segundos */
+    const date = new Date()
+    //REFACTORIZADO
+    horaContainer.innerHTML = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`
+ 
 },1000)
