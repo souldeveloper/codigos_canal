@@ -1,0 +1,32 @@
+body{
+    background-color: rgba(0,0,0,.5);
+    color:white
+}
+.container{
+    width:70vw;
+    height:100vh;
+    margin:2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+input, button{
+    margin: 1rem 0rem;
+    line-height:1.8rem
+}
+button{
+    background-color: goldenrod;
+    
+}
+.contacto{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+.contacto p{
+    flex:8;
+}
+.contacto span{
+    flex:1;
+    color:tomato;
+    cursor: pointer;
+}
