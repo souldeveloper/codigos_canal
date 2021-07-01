@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos en Mongo</title>
+</head>
+<body>
+    <h1>Aplicación con MONGO_DB</h1>
+            <form class="formulario_contacto" action="agregar" method="post">
+                <input type="text" placeholder="nombre" name="nombre">
+                <input type="text" placeholder="numero" name="numero">
+                <input type="text" placeholder="direccion" name="direccion">
+                <input type="text" placeholder="email" name="email">
+                <input type="submit" value="Agregar Contacto">
+            </form>
+            <hr>
+            <%if(contactos.length == 0) { %>
+                <p>Lo siento no tienes contactos</p>
+           <% } %>
+             <% contactos.map(contacto => { %>
+                <div class="contacto">
+                    <span><%= contacto.nombre %> </span>
+                    <span><%= contacto.numero %> </span>
+                    <span><%= contacto.direccion %> </span>
+                    <span><%= contacto.email %> </span>
+                    <span><a href="/borrar/<%= contacto._id %>">X</a></span>
+                </div>
+                <% }) %> 
+
+
+</body>
+</html>
