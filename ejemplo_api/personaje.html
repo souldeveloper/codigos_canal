@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAJE</title>
+</head>
+<body>
+    <div id="personaje">
+
+    </div>
+
+
+    <script>
+        const personaje = document.querySelector('#personaje')
+        const getParametros = new URLSearchParams(window.location.search)
+        const id = getParametros.get('id')
+        const getPersonaje = async id => {
+            const peticion = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
+            const datos = await peticion.json()
+            const divPersonaje = document.createElement('div')
+            const imagen = document.createElement('img')
+            const nombre = document.createElement('p')
+            imagen.src = datos.image
+            nombre.innerHTML = datos.name
+            divPersonaje.appendChild(imagen)
+            divPersonaje.appendChild(nombre)
+            personaje.appendChild(divPersonaje)
+
+            console.log(datos)
+        }
+        getPersonaje(id)
+    </script>
+
+
+
+
+</body>
+</html>
