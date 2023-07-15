@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="busqueda">
+            <label id="num_chofer" for="numeroChofer">Numero de Chofer:</label>
+            <input type="text" placeholder="" id="numeroChofer">
+            
+            <button id="btnBuscar">BUSCAR</button>
+        </div>
+        <div id="turnos">
+           <table class="tabla_resultados">
+            
+                <tr>
+                    <th>Chofer</th>
+                    <th>Nombre</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miercoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sabado</th>
+                    <th>Domingo</th>
+                </tr>
+                <tr id="dias">
+                    <td></td>
+                    <td></td>
+                    
+            </tr>
+                <tr id="add_fila"></tr>
+           </table>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.8.162/pdf.min.js" integrity="sha512-9Wd08apcJEwm8g3lBTg1UW/njdN0iuuOVWKpyinK3uA7ISAE5PmEZ4y8bZYTXVOE3tlt7aFlCBBLmLt5cUxe2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="code.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.contenedor{
+    width: 80%;
+    height: 100vw;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+#num_chofer{
+    line-height:2rem ;
+}
+.busqueda{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3REM;
+}
+#numeroChofer{
+    width: 505;
+    line-height: 1.8rem;
+    padding: 0 1rem;
+    text-decoration: solid;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1rem;
+}
+#btnBuscar{
+    width: 50%;
+    background-color: #42b883;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    border-radius: .5rem;
+}
+.tabla_resultados{
+    width: 100%;
+    border: 1px solid black;
+    height: 5rem;
+}
+.tabla_resultados td{
+    text-align: center;
+}
+.libre{
+    background-color: #519e28;
+}
